@@ -1,32 +1,31 @@
-package snackApp;
-
 public class VendingMachine
 {
-	private static int maxId = 0;
+    private int id;
+    private String name;
 
-	public int id;
-	public String name;
+    public VendingMachine(int id, String name)
+    {
+        this.id = id;
+        this.name = name;
+    }
 
-	public VendingMachine(String name)
-	{
-		maxId++;
-		id = maxId;
+    public int getId()
+    {
+        return id;
+    }
 
-		this.name = name;
-	}
+    public String getName()
+    {
+        return name;
+    }
 
-	public int getId()
-	{
-		return id;
-	}
+    public void setId(int id)
+    {
+        this.id = id;
+    }
 
-	public String getName()
-	{
-		return name;
-	} 
-
-	public void setName(String name)
-	{	
-		this.name = name;
-	}
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 }

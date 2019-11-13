@@ -1,55 +1,54 @@
-package snackApp;
-
 public class Customer
 {
-	private static int maxId = 0;
-	private int id;
-	private String name;
-	private double cOH;
+    private int id;
+    private String name;
+    private double coh;
 
+    public Customer(int id, String name, double coh)
+    {
+        this.id = id;
+        this.name = name;
+        this.coh = coh;
+    }
 
-	public Customer(String name, double cOH)
-	{
-		maxId++;
-		id = maxId;
+    public int getId()
+    {
+        return id;
+    }
 
-		this.name = name;
-		this.cOH = cOH;
+    public String getName()
+    {
+        return name;
+    }
 
-	}
+    public double getCoh()
+    {
+        return coh;
+    }
 
-	public int getId()
-	{
-		return id;
-	}
+    public void setId(int id)
+    {
+        this.id = id;
+    }
 
-	public String getName()
-	{
-		return name;
-	}
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 
-	public void setName(String name)
-	{
-		this.name = name;
-	}
+    public void setCoh(double coh)
+    {
+        this.coh = coh;
+    }
 
-	public double getCOH()
-	{
-		return cOH;
-	}
+    public void addCash(double additionalCash)
+    {
+        return this.coh += additionalCash
+    }
 
-	public void setCOH(double cOH)
-	{
-		this.cOH = cOH;
-	}
+    public void buytotal(int quantity ,double costOfItem)
+    {
+        return this.coh -= costOfItem
+    }
 
-	public void addCash(double addCash)
-	{
-		this.cOH += addCash;
-	} 
-
-	public void totalP(int quantity ,double amount)
-	{
-		this.cOH -= amount;
-	}
 }
